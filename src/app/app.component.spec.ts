@@ -26,10 +26,10 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('demo-project');
   });
 
-  it('should render title', () => {
+  it(`button should have name 'hey click me'`,()=>{
     const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('demo-project app is running!');
+    // const app = fixture.debugElement.componentInstance;
+    const btn = fixture.nativeElement.querySelector('button');
+    expect(btn.textContent).toBe('Hey Click Me.');
   });
 });
